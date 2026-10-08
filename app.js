@@ -10,4 +10,7 @@ app.get('/', (req, res) => {
   res.send({message: 'Welcome to contact book application'});
 });
 
+const contactRouter = require('./app/routes/contact.route');
+app.use('/api/contacts', contactRouter);
+
 module.exports = app;
