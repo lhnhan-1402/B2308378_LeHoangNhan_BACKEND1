@@ -13,6 +13,7 @@ app.get('/', (req, res) => {
 const contactRouter = require('./app/routes/contact.route');
 app.use('/api/contacts', contactRouter);
 
+
 const ApiError = require('./app/api-error');
 app.use((req, res, next) => {
       return next(new ApiError(404, 'Resource not found')); 
